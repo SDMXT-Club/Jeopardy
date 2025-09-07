@@ -1,0 +1,50 @@
+What is the smallest positive integer n such that the sum of the digits of n is equal to one hundred? | 199,999,999,999
+100
+The number of trees in a forest decreased by 25% from 2023 to 2024. If there are n trees in the forest in 2024, express the number of trees in the forest last year in terms of n | 4/3*n
+100
+Find the length of CD | 21
+100
+Solve. | IDK
+100
+A football team has jerseys numbered from 10 to 30. All players receive a jersey and 3 are left over. How many players are on the football team? | 18
+100
+A palindrome reads the same forwards and backwards. The number 2017102 is a 7-digit palindrome. Let A represent the least palindrome greater than 2017102. Let B represent the greatest palindrome less than 2017102. Find A - B | 2000
+200
+A class has girls and boys in a ratio 4:5. Among the girls, the ratio of mathematics to physic students is 3:1. If the ratio of mathematics and physics students in the entire class 3:2, then what percentage of class comprises girls studying mathematics? | 33.3 percent
+200
+A chord has to be drawn on a cirlce of radius 10 cm. No point of the chord can be less than 6 cm away from the center of the circle. Find the maximum possible length of the chord | 16 cm
+200
+What are the coordinates of the triangle after it is rotated about the origin through 540 degrees? | (-3, 0), (-1, -2), (-2, -4)
+200
+A bullet travels at 120 m/s through air. If its speed increases by 25%, how much time will be saved travelling a distance of 81 km? | 135 seconds or 2.25 minutes
+200
+What is the sum of the last digits of the numbers 9^21, 8^20 and 999^2 | 9+6+1 = 16
+300
+What is the value of T if (729^2  ✕ 6561^5 ✕ 9^11) - 9^T = 0 | 37
+300
+A car moves around a point O at a constant velocity of 20 m/s in a circular path, in a clockwise direction. The distance from point O to the car is always 7 m. Find the exact distance moved by the car in moving from directly east of O to directly south of O. | 3.5pi m
+300
+Solve. | B
+300
+Arvin, Tafsir, Irfan, and Azlan played 6 games of badminton together. In each game, the four of them split into two teams of two and one of the teams won the game. If Arvin was on the winning team for 5 games, Tafsir for 2 games, and Irfan for 1 game, for how many games was Azlan on the winning team?  | 4
+300
+How many pairs of numbers (a,b) exist such that both a and b are prime numbers and the sum of a and b is 50? | 4
+400
+Solve. | 4
+400
+A vertical tower OP stands vertically at the center O of a square ABCD. Let h and b denote the length of OP and AB; respectively. If angle APB=60 degrees, find the relationship between h and b. | 2h^2=b^2
+400
+From the graph, what is the equation of this polynomial function | -2x^3 + 5x^2 + 6x - 9
+400
+At a Compliment Day party, everyone shook hands with everyone else. There were a total of 120 handshakes that happened during the party. How many people were present, considering there were no repeat handshakes? | 16 people
+400
+What is the sum of all 3 digit numbers that leave a remainder of 2 when divided by 3? | 164850
+500
+A concert sold two types of tickets, regular tickets that cost $7 and VIP tickets that cost $11. A fourth of all those who bought a ticket also bought snacks, which cost $4. If the total revenue from ticket and snack sales for the concert was $124, how many of the regular tickets were sold? | 5
+500
+Solve | 2:3
+500
+Let the equation of the graph be f(x). At how many total points will the graph of 2f(x) + 5 intersect with either the graph of g(x) = 2/x or the graph of h(x) = x. | 7
+500
+A washing machine is priced at $450. A man buys the washing machine on hire purchase under the following conditions: An initial down payment, with the remaining paid in monthly installments over 2 years with 1023 % simple interest per annum. He ends up paying $81.60 more overall than the regular purchase price. Calculate the down payment made as a percentage of the regular purchase price. | 15%
+500

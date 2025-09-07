@@ -1,0 +1,222 @@
+[gd_scene load_steps=9 format=3 uid="uid://cqp2pq1tncjwx"]
+
+[ext_resource type="Script" path="res://parent.gd" id="1_fhskl"]
+[ext_resource type="PackedScene" uid="uid://ca6exbudjyf2p" path="res://question_display.tscn" id="2_l2mgp"]
+[ext_resource type="PackedScene" uid="uid://s2fowpiglnnh" path="res://gameboard.tscn" id="4_1s80x"]
+[ext_resource type="PackedScene" uid="uid://3xu7w0s2lbas" path="res://operator.tscn" id="5_kndxu"]
+[ext_resource type="Texture2D" uid="uid://vvpkxnv4lmjh" path="res://Board.png" id="6_cbr68"]
+[ext_resource type="VideoStream" path="res://videos/intro.ogv" id="7_h467i"]
+[ext_resource type="PackedScene" uid="uid://c762kw063wqaw" path="res://game_over_screen.tscn" id="9_stseq"]
+[ext_resource type="PackedScene" uid="uid://csqr3l7u6p3rt" path="res://glitch_effect.tscn" id="11_vuwft"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_fhskl")
+
+[node name="Question Display" parent="." instance=ExtResource("2_l2mgp")]
+visible = false
+
+[node name="Operator2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 2309.0
+offset_bottom = 1307.0
+
+[node name="Operator" parent="Operator2" instance=ExtResource("5_kndxu")]
+layout_mode = 1
+
+[node name="Gameboard" parent="." instance=ExtResource("4_1s80x")]
+visible = false
+anchors_preset = 8
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 557.0
+offset_top = 813.0
+offset_right = 1715.0
+offset_bottom = 1069.0
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Gameboard"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.48
+anchor_top = -3.172
+anchor_right = 1.508
+anchor_bottom = 1.937
+offset_left = -0.159973
+offset_top = 0.0320435
+offset_right = -0.264038
+offset_bottom = 0.127991
+grow_horizontal = 2
+grow_vertical = 2
+expand = true
+
+[node name="GO Screen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 2308.0
+offset_bottom = 1294.0
+mouse_filter = 2
+
+[node name="Game over screen" parent="GO Screen" instance=ExtResource("9_stseq")]
+visible = false
+layout_mode = 1
+mouse_filter = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="GO Screen"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand = true
+
+[node name="PseudoGameboard" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 2304.0
+offset_bottom = 1296.0
+
+[node name="TextureRect" type="TextureRect" parent="PseudoGameboard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_cbr68")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="PseudoGameboard/TextureRect"]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 252.0
+offset_right = 863.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 64
+text = "Number 
+Theory
+"
+
+[node name="Label2" type="Label" parent="PseudoGameboard/TextureRect"]
+layout_mode = 0
+offset_left = 933.0
+offset_top = 286.0
+offset_right = 1127.0
+offset_bottom = 352.0
+theme_override_font_sizes/font_size = 64
+text = "Algebra
+"
+
+[node name="Label3" type="Label" parent="PseudoGameboard/TextureRect"]
+layout_mode = 0
+offset_left = 1155.0
+offset_top = 288.0
+offset_right = 1387.0
+offset_bottom = 354.0
+theme_override_font_sizes/font_size = 64
+text = "Geometry
+"
+
+[node name="Label4" type="Label" parent="PseudoGameboard/TextureRect"]
+layout_mode = 0
+offset_left = 1438.0
+offset_top = 286.0
+offset_right = 1605.0
+offset_bottom = 352.0
+theme_override_font_sizes/font_size = 64
+text = "Graphs
+"
+
+[node name="Label5" type="Label" parent="PseudoGameboard/TextureRect"]
+layout_mode = 0
+offset_left = 1645.0
+offset_top = 246.0
+offset_right = 1889.0
+offset_bottom = 381.0
+theme_override_font_sizes/font_size = 64
+text = "Practical
+Math
+"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="PseudoGameboard/TextureRect"]
+layout_mode = 0
+offset_left = 458.0
+offset_top = 284.0
+offset_right = 613.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 64
+text = "POINTS
+"
+
+[node name="Label7" type="Label" parent="PseudoGameboard/TextureRect"]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 436.0
+offset_right = 564.0
+offset_bottom = 502.0
+theme_override_font_sizes/font_size = 64
+text = "100
+"
+
+[node name="Label8" type="Label" parent="PseudoGameboard/TextureRect"]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 575.0
+offset_right = 570.0
+offset_bottom = 641.0
+theme_override_font_sizes/font_size = 64
+text = "200
+"
+
+[node name="Label9" type="Label" parent="PseudoGameboard/TextureRect"]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 726.0
+offset_right = 568.0
+offset_bottom = 792.0
+theme_override_font_sizes/font_size = 64
+text = "300
+"
+
+[node name="Label10" type="Label" parent="PseudoGameboard/TextureRect"]
+layout_mode = 0
+offset_left = 487.0
+offset_top = 861.0
+offset_right = 568.0
+offset_bottom = 927.0
+theme_override_font_sizes/font_size = 64
+text = "400"
+
+[node name="Label11" type="Label" parent="PseudoGameboard/TextureRect"]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 1011.0
+offset_right = 564.0
+offset_bottom = 1077.0
+theme_override_font_sizes/font_size = 64
+text = "500
+"
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="PseudoGameboard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("7_h467i")
+expand = true
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1156, 656)
+
+[node name="Glitch Effect" parent="Camera2D" instance=ExtResource("11_vuwft")]
+visible = false

@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxrrttw5g360i"]
+
+[ext_resource type="PackedScene" uid="uid://c8abatch4s4xp" path="res://player health.tscn" id="1_83vwb"]
+
+[node name="Senior Player Healthbars" type="Node2D"]
+
+[node name="1" parent="." instance=ExtResource("1_83vwb")]
+offset_left = 60.0
+offset_top = 79.0
+offset_right = 263.0
+offset_bottom = 106.0
+
+[node name="Label2" type="Label" parent="1"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 1.0
+offset_right = 200.0
+offset_bottom = 24.0
+text = "team one
+"
+text_overrun_behavior = 3
+
+[node name="2" parent="." instance=ExtResource("1_83vwb")]
+offset_left = 343.0
+offset_top = 76.0
+offset_right = 546.0
+offset_bottom = 103.0
+id = 1
+
+[node name="Label2" type="Label" parent="2"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 198.0
+offset_bottom = 24.0
+text = "team two
+"
+text_overrun_behavior = 3
+
+[node name="3" parent="." instance=ExtResource("1_83vwb")]
+offset_left = 606.0
+offset_top = 74.0
+offset_right = 809.0
+offset_bottom = 101.0
+id = 2
+
+[node name="Label2" type="Label" parent="3"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 2.0
+offset_right = 200.0
+offset_bottom = 25.0
+text = "team three
+"
+text_overrun_behavior = 3
+
+[node name="4" parent="." instance=ExtResource("1_83vwb")]
+offset_left = 869.0
+offset_top = 77.0
+offset_right = 1072.0
+offset_bottom = 104.0
+id = 3
+
+[node name="Label2" type="Label" parent="4"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 1.0
+offset_right = 198.0
+offset_bottom = 24.0
+text = "team four
+"
+text_overrun_behavior = 3

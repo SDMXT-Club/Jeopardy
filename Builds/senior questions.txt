@@ -1,0 +1,50 @@
+Solve. | 15
+100
+Solve. | 1
+100
+Solve. | 1
+100
+The acceleration function and displacement function of car A with respect to time is the same. What is the velocity function of the car?  | v = Ae^t, where A is a real constant
+100
+Solve. | A
+100
+Find the limit of : | 1
+200
+Solve. | I and II
+200
+Find the maximum value of 1/cos(x) +3sin^2 (x) for -π/2 < x < π/2 | 1
+200
+Solve. | D
+200
+Solve. | A
+200
+Solve. | D
+300
+The value of a car depreciates by 70% each year. In 2010, the value of the car was $3000. What was its value in 2007? Give answer to the nearest thousands. | 111,000
+300
+Solve. | 60
+300
+A projectile of mass 10g is launched with velocity 30 ms^-1 at an angle of 60* above horizontal. What is the kinetic energy of the projectile at the highest point of its trajectory? | 1.125 J
+300
+If x is the average (arithmetic mean) of  m and  9,  y  is the average of  2m  and  15, and  z  is the average of  3m  and 18 , what is the average of  x, y ,and z  in terms of  m? | m + 7
+300
+A polynomial in x has m nonzero terms. Another polynomial in x has n nonzero terms, where m < n. These polynomials are multiplied and all like terms are combined. The resulting polynomial in x has a maximum of how many nonzero terms? Give your answer in terms of n and/or m. | mn
+400
+Solve. | B
+400
+If sin 45* = √2/2, find the exact value of cos 5*0.7 | (√6 - √2 )/4
+400
+A particle initially at rest moves such that its acceleration is given by a= v +1. What is velocity of the particle at time t=1s? | e - 1
+400
+At a Christmas party, everyone shook hands with everyone else. There were a total of 66 handshakes that happened during the party. How many people were present? | 12
+400
+Solve. | 5/3 ; 1.67
+500
+Solve. | GP, common ratio is cos(x)
+500
+Solve. | pi/3
+500
+Solve. | B
+500
+Of the 16 cars on a rental-car lot, 6 are minivans, 7 are sedans, and 3 are hatchbacks. Thalia will rent 3 of these cars, chosen at random, for business associates. What is the probability that Thalia will rent 1 of each of the 3 types of cars? | 9/40
+500

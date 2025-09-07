@@ -1,0 +1,50 @@
+What is the next number in the given sequence: 1, 1, 2, 6, 24, 120… : 720
+100
+Solve. | 12
+100
+If a regular decagon is split into 10 identical triangles, what is the measure of each triangle’s interior angles? | 72, 72 and 36
+100
+The complete graph of the function f is shown below. What is the y-intercept of the graph of y = f(x+2)? | (0, 3)
+100
+A bus is traveling at a constant speed along a straight portion of road. The equation d = 30t gives the distance d, in feet from a road marker, that the bus will be t seconds after passing the marker. How many feet from the marker will the bus be 2 seconds after passing the marker? | 60 feet
+100
+One of the famous Hungarian mathematicians lived all his life in the 19th century (1801-1900). Three of the digits in his year of birth and his year of death are the same. His birth year is a multiple of 17, and his year of death is a multiple of 31. If he lived for more than 50 years, what year was he born? | 1802
+200
+A TVA agent is chasing a hacker and only has a small 5 cm by 6 cm photograph to go by. She enlarges each side of the photograph by the same amount. How much was each side enlarged by if the new photograph’s area is 140% larger? | 3 cm
+200
+In the triangle ABC, P, Q and R are the midpoints of the sides AB, BC and CA; respectively. If the area of triangle ABC is 20 sq. units, find the area of triangle PQR. | 5 sq. units
+200
+The graph below shows the line AB. The point C is not displayed. If the length of BC is twice the length of AB, which of the following points cannot be C? | D
+200
+It takes Carter 10 minutes to cut a titanium board into 2 pieces. If she works at the same rate, how long will it take to cut the same board into 4 pieces. | 30 minutes
+200
+The sum of the digits of a two-digit number is 12. When the digits are reversed, the number decreases by 36. Find the number. | 84
+300
+Loki can complete a task in 14 days and Loki and Mobius can complete the same task working together in 10 days. Assuming they both work at a constant rate, how much time will Mobius take to complete the task alone? | 35 days
+300
+Solve. | 9
+300
+Solve. | (2, 4)
+300
+Labib and Safwan, who are 40 km apart, both begin running towards each other in a straight line at a constant speed of 8 km/h. A mosquito, which was at their midpoint, starts flying at the same time they start and always stays at a speed of 30 km/h. First, it flies to Labib, then to Safwan, then back to Labib, and so on, alternating until Safwan and Labib meet. Find the total distance traveled by the mosquito. | 75 km
+300
+Find the smallest positive integer k such that 25k+1 is a perfect square. | 23
+400
+Solve. | 3
+400
+Given a circle with n points around the edge, the maximum number of regions that can be created by joining the points with chords follows this sequence: 1, 2, 4, 8, 16, … What is the next term? | 31
+400
+A car starts from rest and accelerates uniformly at 6 m/s^2 for 10 seconds. After ten seconds, the magnitude of its acceleration decreases by 4 m/s^2 and it travels in this new constant acceleration for the next 700 metres of its journey. Suddenly, the car begins to decelerate from its maximum speed to a speed of 50 m/s^1 until t=30s. Finally, the magnitude of its deceleration increases by x m/s^2, by which its speed uniformly changes until coming to a stop. What is the shape of the graph of the velocity-time graph plotted for the entire journey of the car? | pentagon
+400
+The speed of a railway engine is 42 kmph when no compartment is attached, and the reduction in speed is directly proportional to the square root of number of compartments attached. If the speed of the train carried by this engine is 24 kmph when 9 compartments are attached, what is the maximum number of compartments that can be carried by the engine? | 48
+400
+Find all prime numbers that can be represented both as a sum or a difference of two primes. | 5
+500
+Solve. | 23/2 or 11.5
+500
+A rectangular piece of paper has length 4 cm and width 3 cm. The paper is folded such that one of its corners meets the corner diagonal to it. Find the length of the crease formed on the paper. | 3.75cm
+500
+Solve. | 0.5
+500
+Percy is practicing his swimming for an upcoming competition. For every 10 yards that he swims forward, he turns back and swims back 5 yards backwards and turns back again. He does not turn after he reaches the end of the pool. How many total turns will it take for him to cross a 100-yard swimming pool? | 37 turns
+500

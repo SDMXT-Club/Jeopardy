@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://cypvm8by4760a"]
+
+[ext_resource type="Script" path="res://parent.gd" id="1_g5v0l"]
+[ext_resource type="PackedScene" uid="uid://c8abatch4s4xp" path="res://player health.tscn" id="2_ph1cy"]
+[ext_resource type="PackedScene" uid="uid://bxtoa86py8vj7" path="res://boss health.tscn" id="3_i0qc6"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_g5v0l")
+
+[node name="player healthbar" parent="." instance=ExtResource("2_ph1cy")]
+
+[node name="boss health bar" parent="." instance=ExtResource("3_i0qc6")]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://csqr3l7u6p3rt"]
+
+[ext_resource type="Shader" path="res://glitch.gdshader" id="1_o3v5q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rd0nu"]
+shader = ExtResource("1_o3v5q")
+shader_parameter/shake_power = 0.03
+shader_parameter/shake_rate = 0.5
+shader_parameter/shake_speed = 20.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.01
+
+[node name="Glitch Effect" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_rd0nu")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

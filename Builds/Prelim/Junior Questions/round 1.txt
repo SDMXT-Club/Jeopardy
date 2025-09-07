@@ -1,0 +1,50 @@
+What do you get if you divide the number of minutes in 21 hours by the sum of the sides of a hexagon and the number of natural satellites of the earth | 180
+100
+Two numbers are in the ratio 17:45. One third of the smaller number is less than one fifth of the bigger by 15. The smaller number is | 76.5
+100
+The length of a rectangle is increased by 50% and the width is decreased by 50%. What is the percentage change in the area of the rectangle? | 25% decrease
+100
+The diagram shows the graph of a circular equation, a linear equation and a polynomial equation for the domain -5 < x < 5. If the domain is further restricted to 1 < x < 3, how many values of (x,y) satisfy all three equations? | 1
+100
+A book and a pencil cost $2.20. The book costs $2 more than the pencil. How much does the pencil cost? | $0.10
+100
+A 4-digit security code needs to be created using the integers 0-9, where no digits can be used more than once, and the last digit of the code cannot be an odd number. How many of the security codes created are prime numbers? | 0
+200
+Solve 3^(x) - 3^(x-1) = 54 | 4
+200
+One of the diagonals of a rhombus is equal in length to the diagonal of a 5 cm by 12 cm rectangle, and the other diagonal is equal to 90% the radius of a unit circle. Find the area of the rhombus. | 58.5 cm^2
+200
+Solve. | C
+200
+The ratio of male to female spectators at a concert is 10:14. If 24000 tickets were sold in total and 9600 people did not end up coming, what was the difference between the male and female spectators at the event. | 2400 people
+200
+What is the smallest positive 5-digit integer divisible by 12, 15, and 18? | 10080
+300
+Solve. | 29/3
+300
+What is the smaller angle between the hands of a 12-hour clock at 10:10. | 115 degrees
+300
+Solve. | A
+300
+There are 100 students in a classroom. 99% of the students have black hair. What is the number of black-haired students that need to leave the classroom to change that percentage to 98%? | 50
+300
+How many numbers between 1 and 1000 are divisible by both 9 and 11 but not 7? | 9
+400
+Find the sum of x, y and z | 4 + 7 + 8 = 19
+400
+The areas of the four squares below in ascending order are 3, 12, 27, and s. Find s | 135
+400
+Solve | III
+400
+Ricardo earns $17000 in a year. He has to pay 20% of his total income in taxes, and spends 15% of the remainder to pay interest on his student loans, and saves the rest. In a year where he gets a bonus of $500 every 2 months, how much money is he able to save? | $13600
+400
+The set P contains all 16 numbers such that when 120 is divided by the number, the result is an integer. Find the sum of the eleven smallest numbers in set P. | 86
+500
+Find the roots of the given polynomial equation | 2, -1/2 and 5
+500
+Solve | Not Enough Information
+500
+Solve | 1)A, 2) C, 3) G, 4) D, 5) B, 6) E
+500
+Happy Valley Town had a population of 11000 people at the start of 1997. If the town’s population decreases by 200 people more each year than the previous year, how many people would need to move back to the town at the start of the year 2005 to bring the town back to its original population in 1997? | 7400
+500

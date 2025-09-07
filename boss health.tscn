@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxtoa86py8vj7"]
+
+[ext_resource type="Script" path="res://boss_health.gd" id="1_weqly"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuqhc"]
+bg_color = Color(0.318018, 0.104518, 0.137282, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chy3b"]
+bg_color = Color(0.116713, 0.202586, 0.094922, 1)
+
+[node name="boss health bar" type="ProgressBar"]
+offset_left = -98.0
+offset_top = -16.0
+offset_right = 100.0
+offset_bottom = 11.0
+theme_override_styles/background = SubResource("StyleBoxFlat_vuqhc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_chy3b")
+show_percentage = false
+script = ExtResource("1_weqly")
+
+[node name="HP" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 32
+text = "900"

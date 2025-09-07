@@ -1,0 +1,880 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvrxv7ms8k5fj"]
+
+[ext_resource type="PackedScene" uid="uid://ca6exbudjyf2p" path="res://question_display.tscn" id="1_71m4c"]
+[ext_resource type="Script" path="res://prelims.gd" id="1_os757"]
+[ext_resource type="Texture2D" uid="uid://vvpkxnv4lmjh" path="res://Board.png" id="2_5e0yx"]
+[ext_resource type="Script" path="res://prelim_operator.gd" id="4_rpksy"]
+[ext_resource type="PackedScene" uid="uid://c762kw063wqaw" path="res://game_over_screen.tscn" id="5_e5mu6"]
+
+[sub_resource type="Animation" id="Animation_ej6f1"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.137255, 0.223529, 0.180392, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xpqgw"]
+resource_name = "Transition"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.137255, 0.223529, 0.180392, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ygaq4"]
+_data = {
+"RESET": SubResource("Animation_ej6f1"),
+"Transition": SubResource("Animation_xpqgw")
+}
+
+[node name="Prelims" type="Node2D"]
+script = ExtResource("1_os757")
+
+[node name="Question Display" parent="." instance=ExtResource("1_71m4c")]
+visible = false
+
+[node name="Operator Container" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Operator" type="Control" parent="Operator Container"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 2290.0
+offset_bottom = 1289.0
+script = ExtResource("4_rpksy")
+
+[node name="Labels" type="Control" parent="Operator Container/Operator"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Operator Container/Operator/Labels"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 39.0
+offset_right = 105.0
+offset_bottom = 73.0
+theme_override_font_sizes/font_size = 32
+text = "team 1
+"
+
+[node name="Label2" type="Label" parent="Operator Container/Operator/Labels"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 195.0
+offset_right = 110.0
+offset_bottom = 229.0
+theme_override_font_sizes/font_size = 32
+text = "team 2
+"
+
+[node name="Label3" type="Label" parent="Operator Container/Operator/Labels"]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 38.0
+offset_right = 609.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 32
+text = "team 3
+"
+
+[node name="Label4" type="Label" parent="Operator Container/Operator/Labels"]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 196.0
+offset_right = 610.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 32
+text = "
+"
+
+[node name="Inputs" type="Control" parent="Operator Container/Operator"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="LineEdit" type="LineEdit" parent="Operator Container/Operator/Inputs"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -347.5
+offset_top = -84.0
+offset_right = 347.5
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+
+[node name="Round check" type="CheckButton" parent="Operator Container/Operator/Inputs"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = 244.5
+offset_right = 199.0
+offset_bottom = 318.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "Senior round?"
+expand_icon = true
+
+[node name="Round Number Check" type="CheckButton" parent="Operator Container/Operator/Inputs"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = 134.5
+offset_right = 156.0
+offset_bottom = 176.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "Round Number (1/2)"
+
+[node name="Get Questions Button" type="Button" parent="Operator Container/Operator/Inputs"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -158.0
+offset_right = 190.0
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "Get Questions"
+
+[node name="Gameboard" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 2305.0
+offset_bottom = 1200.0
+
+[node name="Team Score" type="ColorRect" parent="Gameboard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -3.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Name Labels" type="Control" parent="Gameboard/Team Score"]
+anchors_preset = 0
+offset_left = -2.0
+offset_top = 1196.0
+offset_right = 2293.0
+offset_bottom = 1294.0
+
+[node name="Label" type="Label" parent="Gameboard/Team Score/Name Labels"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -77.0
+offset_right = 389.0
+offset_bottom = -15.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 54
+text = "Team 1: "
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Label2" type="Label" parent="Gameboard/Team Score/Name Labels"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -548.5
+offset_top = -75.0
+offset_right = -198.5
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 54
+text = "Team 1:"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Label3" type="Label" parent="Gameboard/Team Score/Name Labels"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 54.5
+offset_top = -72.0
+offset_right = 386.5
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 54
+text = "Team 1: "
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Label4" type="Label" parent="Gameboard/Team Score/Name Labels"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 597.5
+offset_top = -74.0
+offset_right = 959.5
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 54
+text = "
+"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Score Labels" type="Control" parent="Gameboard/Team Score"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label5" type="Label" parent="Gameboard/Team Score/Score Labels"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 1218.0
+offset_right = 567.0
+offset_bottom = 1280.0
+theme_override_font_sizes/font_size = 54
+text = "0000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="Gameboard/Team Score/Score Labels"]
+layout_mode = 0
+offset_left = 906.0
+offset_top = 1216.0
+offset_right = 1140.0
+offset_bottom = 1278.0
+theme_override_font_sizes/font_size = 54
+text = "0000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="Gameboard/Team Score/Score Labels"]
+layout_mode = 0
+offset_left = 1479.0
+offset_top = 1217.0
+offset_right = 1713.0
+offset_bottom = 1279.0
+theme_override_font_sizes/font_size = 54
+text = "0000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="Gameboard/Team Score/Score Labels"]
+layout_mode = 0
+offset_left = 2056.0
+offset_top = 1222.0
+offset_right = 2290.0
+offset_bottom = 1284.0
+theme_override_font_sizes/font_size = 54
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gameboard Texture" type="TextureRect" parent="Gameboard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5e0yx")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Label6" type="Label" parent="Gameboard/Gameboard Texture"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 259.0
+offset_right = 615.0
+offset_bottom = 325.0
+theme_override_font_sizes/font_size = 64
+text = "POINTS
+"
+metadata/_edit_lock_ = true
+
+[node name="Label7" type="Label" parent="Gameboard/Gameboard Texture"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 492.0
+offset_top = -201.0
+offset_right = 564.0
+offset_bottom = -135.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "100
+"
+metadata/_edit_lock_ = true
+
+[node name="Label8" type="Label" parent="Gameboard/Gameboard Texture"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 492.0
+offset_top = -62.0
+offset_right = 572.0
+offset_bottom = 4.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "200
+"
+metadata/_edit_lock_ = true
+
+[node name="Label9" type="Label" parent="Gameboard/Gameboard Texture"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 495.0
+offset_top = 69.0
+offset_right = 575.0
+offset_bottom = 135.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "300
+"
+metadata/_edit_lock_ = true
+
+[node name="Label10" type="Label" parent="Gameboard/Gameboard Texture"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 499.0
+offset_top = 200.0
+offset_right = 580.0
+offset_bottom = 266.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "400"
+metadata/_edit_lock_ = true
+
+[node name="Label11" type="Label" parent="Gameboard/Gameboard Texture"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 498.0
+offset_top = 341.0
+offset_right = 578.0
+offset_bottom = 407.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "500
+"
+metadata/_edit_lock_ = true
+
+[node name="Junior Categories" type="Control" parent="Gameboard/Gameboard Texture"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Gameboard/Gameboard Texture/Junior Categories"]
+layout_mode = 0
+offset_left = 705.0
+offset_top = 227.0
+offset_right = 880.0
+offset_bottom = 362.0
+theme_override_font_sizes/font_size = 64
+text = "Number 
+Theory
+"
+metadata/_edit_lock_ = true
+
+[node name="Label2" type="Label" parent="Gameboard/Gameboard Texture/Junior Categories"]
+layout_mode = 0
+offset_left = 932.0
+offset_top = 267.0
+offset_right = 1123.0
+offset_bottom = 333.0
+theme_override_font_sizes/font_size = 64
+text = "Algebra
+"
+metadata/_edit_lock_ = true
+
+[node name="Label3" type="Label" parent="Gameboard/Gameboard Texture/Junior Categories"]
+layout_mode = 0
+offset_left = 1157.0
+offset_top = 264.0
+offset_right = 1389.0
+offset_bottom = 330.0
+theme_override_font_sizes/font_size = 64
+text = "Geometry
+"
+metadata/_edit_lock_ = true
+
+[node name="Label4" type="Label" parent="Gameboard/Gameboard Texture/Junior Categories"]
+layout_mode = 0
+offset_left = 1438.0
+offset_top = 261.0
+offset_right = 1603.0
+offset_bottom = 327.0
+theme_override_font_sizes/font_size = 64
+text = "Graphs
+"
+metadata/_edit_lock_ = true
+
+[node name="Label5" type="Label" parent="Gameboard/Gameboard Texture/Junior Categories"]
+layout_mode = 0
+offset_left = 1648.0
+offset_top = 219.0
+offset_right = 1885.0
+offset_bottom = 354.0
+theme_override_font_sizes/font_size = 64
+text = "Practical
+Maths
+"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Senior Categories" type="Control" parent="Gameboard/Gameboard Texture"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label6" type="Label" parent="Gameboard/Gameboard Texture/Senior Categories"]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 226.0
+offset_right = 879.0
+offset_bottom = 361.0
+theme_override_font_sizes/font_size = 64
+text = "Algebra
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Label7" type="Label" parent="Gameboard/Gameboard Texture/Senior Categories"]
+layout_mode = 0
+offset_left = 916.0
+offset_top = 263.0
+offset_right = 1159.0
+offset_bottom = 329.0
+theme_override_font_sizes/font_size = 60
+text = "Sequences"
+metadata/_edit_lock_ = true
+
+[node name="Label8" type="Label" parent="Gameboard/Gameboard Texture/Senior Categories"]
+layout_mode = 0
+offset_left = 1165.0
+offset_top = 271.0
+offset_right = 1417.0
+offset_bottom = 337.0
+theme_override_font_sizes/font_size = 43
+text = "Trigonometry
+"
+metadata/_edit_lock_ = true
+
+[node name="Label9" type="Label" parent="Gameboard/Gameboard Texture/Senior Categories"]
+layout_mode = 0
+offset_left = 1406.0
+offset_top = 261.0
+offset_right = 1649.0
+offset_bottom = 327.0
+theme_override_font_sizes/font_size = 60
+text = "Mechanics"
+
+[node name="Label10" type="Label" parent="Gameboard/Gameboard Texture/Senior Categories"]
+layout_mode = 0
+offset_left = 1648.0
+offset_top = 219.0
+offset_right = 1885.0
+offset_bottom = 354.0
+theme_override_font_sizes/font_size = 42
+text = "Probability
+and
+Statistics
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Buttons" type="Control" parent="Gameboard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Question Button" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 659.0
+offset_top = 372.0
+offset_right = 905.0
+offset_bottom = 499.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button2" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 912.0
+offset_top = 374.0
+offset_right = 1147.0
+offset_bottom = 496.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button3" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 1154.0
+offset_top = 372.0
+offset_right = 1388.0
+offset_bottom = 498.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button4" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 1392.0
+offset_top = 368.0
+offset_right = 1635.0
+offset_bottom = 498.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button5" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 1647.0
+offset_top = 366.0
+offset_right = 1888.0
+offset_bottom = 496.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button6" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 661.0
+offset_top = 504.0
+offset_right = 907.0
+offset_bottom = 631.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button7" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 914.0
+offset_top = 506.0
+offset_right = 1149.0
+offset_bottom = 628.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button8" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 1156.0
+offset_top = 504.0
+offset_right = 1390.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button9" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 1394.0
+offset_top = 500.0
+offset_right = 1637.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button10" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 1641.0
+offset_top = 498.0
+offset_right = 1889.0
+offset_bottom = 627.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button11" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 661.0
+offset_top = 633.0
+offset_right = 907.0
+offset_bottom = 760.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button12" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 914.0
+offset_top = 635.0
+offset_right = 1149.0
+offset_bottom = 757.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button13" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 1156.0
+offset_top = 633.0
+offset_right = 1390.0
+offset_bottom = 759.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button14" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 1394.0
+offset_top = 629.0
+offset_right = 1637.0
+offset_bottom = 759.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button15" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 1645.0
+offset_top = 627.0
+offset_right = 1889.0
+offset_bottom = 758.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button16" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 661.0
+offset_top = 762.0
+offset_right = 907.0
+offset_bottom = 889.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button17" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 911.0
+offset_top = 767.0
+offset_right = 1146.0
+offset_bottom = 889.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button18" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 1156.0
+offset_top = 762.0
+offset_right = 1390.0
+offset_bottom = 888.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button19" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 1394.0
+offset_top = 758.0
+offset_right = 1637.0
+offset_bottom = 892.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button20" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 1647.0
+offset_top = 765.0
+offset_right = 1887.0
+offset_bottom = 892.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button21" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 897.0
+offset_right = 906.0
+offset_bottom = 1024.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button22" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 911.0
+offset_top = 899.0
+offset_right = 1146.0
+offset_bottom = 1021.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button23" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 1155.0
+offset_top = 897.0
+offset_right = 1389.0
+offset_bottom = 1023.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button24" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 1393.0
+offset_top = 893.0
+offset_right = 1636.0
+offset_bottom = 1023.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Question Button25" type="Button" parent="Gameboard/Buttons"]
+layout_mode = 0
+offset_left = 1648.0
+offset_top = 900.0
+offset_right = 1891.0
+offset_bottom = 1030.0
+theme_override_font_sizes/font_size = 25
+text = "question i"
+metadata/_edit_lock_ = true
+
+[node name="Separators" type="Control" parent="Gameboard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="VSeparator" type="VSeparator" parent="Gameboard/Separators"]
+layout_mode = 0
+offset_left = 1145.0
+offset_top = 1202.0
+offset_right = 2305.0
+offset_bottom = 1291.0
+metadata/_edit_lock_ = true
+
+[node name="VSeparator2" type="VSeparator" parent="Gameboard/Separators"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 1202.0
+offset_right = 2301.0
+offset_bottom = 1291.0
+metadata/_edit_lock_ = true
+
+[node name="VSeparator3" type="VSeparator" parent="Gameboard/Separators"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1203.0
+offset_right = 1145.0
+offset_bottom = 1292.0
+metadata/_edit_lock_ = true
+
+[node name="Game over screen" parent="." instance=ExtResource("5_e5mu6")]
+visible = false
+offset_left = 1179.0
+offset_top = 691.0
+offset_right = 1179.0
+offset_bottom = 691.0
+
+[node name="Transition2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 2302.0
+offset_bottom = 1296.0
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="Transition" type="ColorRect" parent="Transition2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.137255, 0.223529, 0.180392, 0)
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transition2/Transition"]
+libraries = {
+"": SubResource("AnimationLibrary_ygaq4")
+}
+
+[connection signal="text_submitted" from="Operator Container/Operator/Inputs/LineEdit" to="Operator Container/Operator" method="_on_line_edit_text_submitted"]
+[connection signal="toggled" from="Operator Container/Operator/Inputs/Round check" to="Operator Container/Operator" method="_on_check_button_toggled"]
+[connection signal="toggled" from="Operator Container/Operator/Inputs/Round Number Check" to="Operator Container/Operator" method="_on_round_number_check_toggled"]
+[connection signal="pressed" from="Operator Container/Operator/Inputs/Get Questions Button" to="Operator Container/Operator" method="_on_get_questions_button_pressed"]
